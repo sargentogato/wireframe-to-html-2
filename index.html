@@ -4,6 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500&family=Lobster&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/05c1d06020.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./img/favicon-sargentogato.png" type="image/x-icon">
+
   <link rel="stylesheet" href="./style/style.css">
   <title>Wireframe a HTML</title>
 </head>
@@ -11,7 +17,7 @@
 <body>
   <div class="main-box">
 
-    <!-- Header -->
+    <!-- ======= Header ======= -->
     <header class="header">
       <div class="header__box-left">
         <picture><img class="header__logo" src="./img/logo.png" alt="Coca-cola">
@@ -19,17 +25,30 @@
       </div>
       <div class="header__media-box">
         <div class="header__media-item">
-          <picture><img src="./img/facebook.png" alt="facebook" class="header__logo"></picture>
+          <picture>
+            <a href="https://www.facebook.com/" target="_blank">
+              <img src="./img/facebook.png" alt="facebook" class="header__logo">
+          </picture>
+          </a>
         </div>
         <div class="header__media-item">
-          <picture><img src="./img/twitter.png" alt="twitter" class="header__logo"></picture>
+          <picture>
+            <a href="https://twitter.com/" target="_blank">
+              <img src="./img/twitter.png" alt="twitter" class="header__logo">
+          </picture>
+          </a>
         </div>
         <div class="header__media-item">
-          <picture><img src="./img/youtube.png" alt="instagram" class="header__logo"></picture>
+          <picture>
+            <a href="https://www.youtube.com/" target="_blank">
+              <img src="./img/youtube.png" alt="instagram" class="header__logo">
+          </picture>
+          </a>
         </div>
       </div>
     </header>
 
+    <!-- ======= Menu ======= -->
     <menu class="menu">
       <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Tienda</a></li>
@@ -38,17 +57,71 @@
       <li class="menu__item"><a class="menu__link" href="#">Contacto</a></li>
     </menu>
 
-    <section class="section-cards">
-      <div class="section-cards__item"></div>
-      <div class="section-cards__item"></div>
-      <div class="section-cards__item"></div>
+    <!-- ======= Cards ======= -->
+    <section class="cards">
+      <div class="cards__item">
+        <picture class="cards__img"><img src="./img/creator.jpeg" alt="Creador de Coca-cola"></picture>
+        <h1 class="cards__title">La Historia</h1>
+        <button class="btn">Acceder</button>
+      </div>
+      <div class="cards__item">
+        <picture class="cards__img"><img src="./img/cocala-history.jpg" alt="La Historia de Coca-cola"></picture>
+        <h1 class="cards__title">La primera Coca-cola</h1>
+        <button class="btn">Acceder</button>
+      </div>
+      <div class="cards__item">
+        <picture class="cards__img"><img src="./img/bottles.jpeg" alt="Los diferentes embases"></picture>
+        <h1 class="cards__title">Viajando en el Tiempo</h1>
+        <button class="btn">Acceder</button>
+      </div>
     </section>
 
+    <!-- ======= Section Article ======= -->
     <section class="section-articles">
-      <article class="article"></article>
+      <article class="article">
+        <picture><img src="./img/felicidad.jpg" alt="" class="article-img"></picture>
+        <h1 class="article-title">Las cosas que te hacen feliz</h1>
+        <p class="article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint magnam accusamus vitae
+          totam quae, sapiente omnis debitis impedit temporibus voluptate quo ducimus ratione deleniti libero iste nam
+          fugit harum molestiae...
+        </p>
+        <button class="btn">Ver más</button>
+      </article>
+      <article class="article">
+        <picture><img src="./img/cola-china.jpg" alt="" class="article-img"></picture>
+        <h1 class="article-title">Viajando por Asia</h1>
+        <p class="article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint magnam accusamus vitae
+          totam quae, sapiente omnis debitis impedit temporibus voluptate quo ducimus ratione deleniti libero iste nam
+          fugit harum molestiae...
+        </p>
+        <button class="btn">Ver más</button>
+      </article>
+      <article class="article">
+        <picture><img src="./img/green-cola.jpg" alt="" class="article-img"></picture>
+        <h1 class="article-title">Pruébala, no te arrepentiras</h1>
+        <p class="article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint magnam accusamus vitae
+          totam quae, sapiente omnis debitis impedit temporibus voluptate quo ducimus ratione deleniti libero iste nam
+          fugit harum molestiae...
+        </p>
+        <button class="btn">Ver más</button>
+      </article>
     </section>
 
-    <footer class="footer"></footer>
+    <!-- ======= Footer ======= -->
+    <footer class="footer">
+      <h5 class="footer__autor"><img src="./img/sargentogato.png" alt="Marlon Velasquez">Done by sargentogato</h5>
+      <p class="footer__email"><a href="mailto:marlonjvelasquez@gmail.com">marlonjvelasquez@gmail.com</a></p>
+
+      <p class="footer-box__icon">
+        <a class="footer-icon__item" href="https://github.com/sargentogato?tab=repositories" target="_blank"><i
+            class="fa fa-github" aria-hidden="true"></i></a>
+        <a class="footer-icon__item" href="https://gitlab.com/Sargentogato" target="_blank"><i class="fa fa-gitlab"
+            aria-hidden="true"></i></a>
+        <a class="footer-icon__item" href="https://codepen.io/sargentogato/pens/public" target="_blank"><i
+            class="fa fa-codepen" aria-hidden="true"></i></a>
+      </p>
+  </div>
+  </footer>
   </div>
 </body>
 
