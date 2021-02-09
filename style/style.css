@@ -19,46 +19,55 @@ p {
 a {
   text-decoration: none;
   display: block;
-  /* color: black; */
 }
 
 li {
   list-style: none;
+}
+
+li,
+button {
   cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 :root {
   --background-main: #e6e7e9;
   --background-1: #4b4b4d;
   --background-2: #d2d3d5;
-  --background-3: #858688;
-  --height-header: 5rem;
+  --background-3: #a3a3a3;
+  --height-header-mobile: 8rem;
   --height-header-boxes: 50%;
   --margin-header-boxes: 1rem;
   --width-header-box: 7rem;
   --size-header-media-circles-mobile: 2rem;
-  --margin-top-general: 1rem;
+  --margin-top-general: 2rem;
   --margin-top-button-mainBox: 1.2rem;
   --font-size-menu: 1.25rem;
+  --shadow-boxes: 1px 1px 0.5rem 1px;
   /** Screen 768 **/
-  --height-header-768: 5rem;
+  --height-header-768: 10rem;
   --width-header-box-768: 8rem;
   --size-header-media-circles-768: 2rem;
   /** Screen 1024 **/
   --height-header-1024: 7rem;
-  --height-header: 12rem;
+  --height-header-1024: 12rem;
   --width-header-box-1024: 9rem;
   --size-header-media-circles-1024: 3rem;
 }
-
 /* 
- * mobile style
+ *  **********************mobile***********************
  */
 body {
   display: flex;
   justify-content: center;
-  height: 100vh;
   width: 100%;
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lobster", cursive;
 }
 
 .main-box {
@@ -71,10 +80,11 @@ body {
   background-color: var(--background-main);
 }
 
+/*********Header********/
 .header {
   display: flex;
   align-items: center;
-  height: var(--height-header);
+  height: var(--height-header-mobile);
   justify-content: space-between;
 
   background-image: url("../img/fondo.jpg");
@@ -109,6 +119,7 @@ body {
   height: var(--size-header-media-circles-mobile);
 }
 
+/*********Menu********/
 .menu {
   display: flex;
   flex-direction: column;
@@ -139,42 +150,146 @@ body {
   font-weight: bold;
 }
 
-.section-cards {
+/*********Cards********/
+.cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
   width: 100%;
-  height: 100%;
   margin-top: var(--margin-top-general);
 }
 
-.section-cards__item {
+.cards__item {
   width: 50%;
   height: 100%;
-  background-color: var(--background-3);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  box-shadow: var(--shadow-boxes);
+  background-color: white;
 }
 
+.cards__title {
+  text-align: center;
+  margin-block-start: 0.5rem;
+  margin-block-end: 0.5rem;
+}
+
+.cards__img {
+  width: 100%;
+}
+
+.btn {
+  padding: 0.1rem 0.3rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+
+  box-shadow: inset 1px 1px 0.5rem 1px;
+}
+
+/*********Section********/
 .section-articles {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: var(--margin-top-general);
   width: 100%;
-  height: 50%;
+  height: 100%;
   background-color: var(--background-3);
 }
 
 .article {
-  flex-basis: 70%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-basis: 1;
   height: 100%;
-  background-color: var(--background-1);
+  border: 0.01rem solid rgb(228, 228, 228);
+  box-shadow: var(--shadow-boxes);
+  margin-block-start: 1rem;
+  background-color: white;
 }
 
+.article-title {
+  text-align: center;
+}
+
+.article-title,
+.article-text {
+  margin-block-start: 0.5rem;
+}
+
+.article-text {
+  padding: 0 0.5rem;
+}
+.article > .btn {
+  margin-block-start: 1rem;
+}
+/*********Footer********/
 .footer {
-  width: 100%;
-  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: sticky;
   margin-top: var(--margin-top-general);
-  background-color: var(--background-1);
+  padding: 1rem 0;
+
+  font-family: "Open Sans";
+  font-weight: 600;
+  background-color: #fa4a3b;
+}
+
+.footer__autor {
+  font-size: 0.8rem;
+}
+
+.footer__autor img {
+  width: 20px;
+  height: 20px;
+}
+
+.footer__email {
+  font-size: 0.9rem;
+  color: white;
+}
+
+.copyR {
+  color: white;
+  font-size: 0.7rem;
+}
+
+.footer-box__icon {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+
+  margin-top: 0.5rem;
+}
+
+.fa-github,
+.fa-gitlab,
+.fa-codepen {
+  font-size: 20px;
+}
+
+.fa-github {
+  color: black;
+}
+
+.fa-gitlab {
+  color: rgb(202, 17, 17);
+}
+
+.footer-icon__item .fa-codepen {
+  color: black;
 }
 
 /*************************************Media Querie 768*******************************************/
@@ -205,12 +320,11 @@ body {
     flex-basis: 100%;
   }
 
-  .section-cards {
+  .cards {
     flex-direction: row;
-    height: 20%;
   }
 
-  .section-cards__item {
+  .cards__item {
     flex-basis: 1;
     height: 100%;
   }
@@ -230,5 +344,9 @@ body {
   .header__media-item {
     flex-basis: var(--size-header-media-circles-1024);
     height: var(--size-header-media-circles-1024);
+  }
+
+  .article {
+    flex-basis: 50%;
   }
 }
